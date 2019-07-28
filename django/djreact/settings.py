@@ -72,6 +72,13 @@ TEMPLATES = [
     },
 ]
 
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/local/',  # end with slash
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats-local.json'),
+    }
+}
+
 WSGI_APPLICATION = 'djreact.wsgi.application'
 
 
