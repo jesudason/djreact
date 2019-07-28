@@ -20,7 +20,7 @@ const styles = {
 
 @connect(state => ({
   counters: state.counters,
-  github: state.github,  
+  github: state.github, 
 }))
 @Radium
 

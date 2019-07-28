@@ -10,7 +10,7 @@ import { Provider } from "react-redux"
 import thunk from "redux-thunk"
 
 import * as reducers from "./reducers"
-import App1Container from "./containers/App1Container"
+import CmsContainer from "./containers/CmsContainer"
 
 let finalCreateStore = compose(
   applyMiddleware(thunk),
@@ -23,7 +23,7 @@ class App1 extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <App1Container />
+        <CmsContainer />
       </Provider>
     )
   }

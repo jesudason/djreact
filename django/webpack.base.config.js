@@ -20,10 +20,16 @@ module.exports = {
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
+    // new webpack.optimize.CommonsChunkPlugin({ name: 'vendors', filename: 'vendors.js' }),
   ], // add all common plugins here
 
   module: {
-    loaders: [] // add all common loaders here
+    loaders: [
+      {
+        test: /\.scss$/,
+        loaders: ["style-loader", "css-loader", "sass-loader"]
+      }
+    ], // add all common loaders here   
   },
 
   resolve: {
